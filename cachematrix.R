@@ -1,5 +1,6 @@
 ## These functions are to complete Week 2 of R Programming Certification 
-##     store a matrix in cache
+## Goal:
+##     store a matrix 'x' in cache
 ##     return a matrix that is the inverse of 'x'
 
 
@@ -7,9 +8,10 @@
 
 makeCacheMatrix <- function(x = matrix()) {
     inv <- NULL
-    set <- function(y) {
-        x <<- y
-        m <<- NULL
+    set <- function(y) { 
+        x <<- y # caches a new matrix
+        inv <<- NULL # clear the previously cached inverted matrix 
+                     # as it would not match anymore
     }
     get <- function() x
     setInverted <- function(invertedM) inv <<- invertedM
